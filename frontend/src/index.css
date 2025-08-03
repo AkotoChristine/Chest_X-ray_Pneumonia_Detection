@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    --primary: #b68cc8;
+    --secondary: #9a93ac;
+    --highlight: #f00078;
+    --highlight-dark: #296c86;
+    --text-header: var(--primary);
+    --text-main-headers: var(--highlight);
+    --text-links: #6c20df;
+    --text-footer: #333;
+    --bg-main: #e9e2e8;
+    --bg-dots: var(--bg-main);
+    --bg-lesson: #f9f1f0;
+    --nav-buttons: var(--highlight);
+    --nav-buttons-text: #fff;
+    --corner-active: var(--highlight);
+    --corner-inactive: #f4f4f4;
+    --icons: var(--highlight);
+    --footer-icons: var(--highlight);
+    --emphasized-bg: #e8e3e7;
+    --emphasized-border: #aab6d2;
+    --bg-color: #6c20df;
+    --nav-icon: black;
+    --home-h1: #000;
+    --home-para: #4b5563;
+    --footer: #3a245b;
+    --title: #6c20df;
+    --others-h1: #3b0764;
+    --gray: #1f2937;
+    --underline: var(--bg-color);
+    --authors-card: #fff;
+}
+
+@layer base {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    html {
+        -moz-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    figure,
+    blockquote,
+    dl,
+    dd {
+        margin: 0;
+    }
+    [role="list"] {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        min-block-size: 100vh;
+        line-height: 1.6;
+        background-color: var(--bg-main);
+        overflow-x: hidden;
+        min-height: 100vh;
+    }
+    #prediction {
+        background-color: var(--bg-main);
+        padding: 2rem;
+    }
+    #prediction h2 {
+        color: #00abf0;
+        font-family: "Kumbh Sans", sans-serif;
+    }
+    .project {
+        background-color: white;
+        margin-bottom: 1rem;
+        color: var(--highlight);
+        text-align: center;
+        border-radius: 0.9rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    #projects h2 {
+        color: #00abf0;
+        font-weight: bold;
+    }
+    .bookDetails {
+        background-color: var(--bg-main);
+    }
+    h1,
+    h2,
+    h3,
+    button,
+    input,
+    label {
+        line-height: 1.1;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        text-wrap: balance;
+    }
+    p,
+    li {
+        text-wrap: pretty;
+    }
+    img,
+    picture {
+        max-inline-size: 100%;
+        display: block;
+    }
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
+    body {
+        font-family: "Open Sans", sans-serif;
+    }
+}
+
+@layer headers {
+    .obes-logo {
+        width: 120px;
+    }
+    .isActiveBtn {
+        position: relative;
+    }
+    .isActiveBtn::after {
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 100%;
+        background-color: var(--underline);
+        bottom: -20px;
+        left: 0;
+    }
+    .logo-div {
+        display: flex;
+        align-items: center;
+    }
+    header {
+        background-color: var(--bg-main);
+        padding: 0.2rem 3rem;
+    }
+    .home-btn {
+        background-color: var(--highlight) !important;
+        color: white !important;
+        border-radius: .375rem;
+        padding: .75rem 1.5rem;
+        transition-duration: .3s;
+    }
+    .contact {
+        color: var(--icon-color) !important;
+    }
+    h1 span {
+        color: var(--highlight);
+    }
+    .home-h1 {
+        color: var(--home-h1) !important;
+    }
+    .others-h1,
+    .book-title {
+        color: var(--others-h1) !important;
+    }
+    .home-para {
+        color: var(--gray) !important;
+    }
+    .authors {
+        background-color: #fff;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .active {
+        background-color: var(--highlight);
+    }
+    nav ul li {
+        color: var(--highlight-dark);
+    }
+    nav ul li a {
+        font-weight: 600;
+    }
+    nav .dropdown-div {
+        background-color: var(--secondary);
+    }
+    .nav-icon {
+        color: var(--icon-color);
+    }
+    .scrollToTop {
+        height: 65px;
+        width: 65px;
+        border-radius: 50% !important;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: "#9333ea" !important;
+        color: #fff;
+        bottom: 20px;
+        right: 20px;
+        position: fixed,
+    }
+}
+
+@layer BookSection {
+    .book-card {
+        background-color: var(--bg-lesson);
+    }
+    .book-card .book-title {
+        color: var(--bg-color);
+    }
+    .book-card .book-author {
+        color: var(--highlight-dark);
+    }
+    .selected-box {
+        /* background-color: var(--bg-color); */
+        background-color: transparent;
+        color: var(--highlight-dark) !important;
+        font-weight: bold !important;
+    }
+    .authors-card {
+        background-color: var(--authors-card);
+    }
+}
+
+@layer animation {
+    @keyframes upArrow {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    .animate-arrow {
+        animation: upArrow 1.5s infinite ease-in-out;
+    }
+}
+
+@layer Footer {
+    footer {
+        background-color: var(--footer);
+    }
+}
+
+@layer SwiperStyle {
+    .swiper-button-next,
+    .swiper-button-prev {
+        padding: 1.25rem;
+        background-color: var(--bg-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        font-size: 1.3rem !important;
+        font-weight: bold !important;
+        color: white;
+    }
+    .swiper-slide {
+        width: 150px !important;
+        margin-right: 3rem;
+    }
+    .file-submit {
+        background-color: #00abf0 !important;
+    }
+    h2 {
+        color: #00abf0;
+    }
+    .file-upload {
+        max-width: 80%;
+    }
+}
