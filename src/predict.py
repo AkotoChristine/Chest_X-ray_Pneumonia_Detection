@@ -2,7 +2,7 @@ from tensorflow.keras.models import load_model
 from src.preprocessing import preprocess_image
 
 # Load the model once when this module is imported
-MODEL_PATH = "models/pneumonia_model.h5"
+MODEL_PATH = "models\chest_xray_cnn_model.h5"
 model = load_model(MODEL_PATH)
 
 def predict_image(file_bytes):

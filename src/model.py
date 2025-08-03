@@ -1,9 +1,12 @@
 import os
 import numpy as np
+import tensorflow as tf
+tf.config.run_functions_eagerly(True)  
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
+
 
 # Set paths
 MODEL_PATH = 'models/chest_xray_cnn_model.h5'  
@@ -33,7 +36,7 @@ val_data = val_datagen.flow_from_directory(
 )
 
 # Compile (you can change learning rate here)
-model.compile(optimizer=Adam(learning_rate=0.00005),  # smaller LR for fine-tuning
+model.compile(optimizer=Adam(learning_rate=0.0005),  # smaller LR for fine-tuning
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
