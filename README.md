@@ -4,6 +4,8 @@ A full-stack AI-powered web app that detects pneumonia from chest X-ray images u
 Built with **FastAPI** (Python) for the backend and **React.js** for the frontend.
 
 ---
+![Iocust image](https://github.com/user-attachments/assets/15c922ce-3ddc-47b0-9e96-d0ad41445ccd) 
+
 
 ##  Live Demo
 
